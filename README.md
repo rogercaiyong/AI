@@ -1,3 +1,3 @@
 # AI
 
-Hi Humans, Roger is here.
+This respository is for AI course homework submission.
