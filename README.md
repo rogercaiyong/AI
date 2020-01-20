@@ -1,3 +1,3 @@
 # AI
 
-This respository is for AI course homework submission.
+This respository is for AI assignements submission.
