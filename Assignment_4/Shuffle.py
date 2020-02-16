@@ -6,17 +6,12 @@ y = ['差评','差评','差评','差评','好评','好评','好评','好评']
 def shuffle(x,y):
     x_array = np.array(x)
     y_array = np.array(y)
-    print(x_array)
-    print(y_array)
     permutation = np.random.permutation(x_array.shape[0])
-    print(permutation)
-    a = x_array[permutation]
-    b = y_array[permutation]
-    print(a)
-    print(b)
-    return a,b
+    x = x_array[permutation]
+    y = y_array[permutation]
+    return x,y
 
-shuffle(x, y)
+x, y = shuffle(x, y)
 
-for i,j in zip(a,b):
+for i,j in zip(x,y):
     print(i,':',j)
