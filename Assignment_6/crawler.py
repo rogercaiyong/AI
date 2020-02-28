@@ -56,9 +56,6 @@ def save(data, file):
         f.write(str(data))
     print('data saved in', file)
 
-def aboveGood(obj):
-    return obj[2] == '优' or obj[2] == '良'
-
 if __name__ == '__main__':
     datas = []
     for i in range(1, 3):
@@ -68,6 +65,6 @@ if __name__ == '__main__':
         datas.extend(data)
     #print(f'几个月合起来的数据是{datas}')
 
-    data = list(filter(aboveGood, datas))
+    data = list(filter(lambda x: x[2] == '优' or x[2] == '良', datas))
     #print(f'优良的数据是{data}')
     save(data, r'C:\Users\cair\Documents\data.txt')
