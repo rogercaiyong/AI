@@ -70,4 +70,4 @@ if __name__ == '__main__':
 
     data = list(filter(aboveGood, datas))
     #print(f'优良的数据是{data}')
-    save(data, r'C:\Users\cair\Documents\Work 2018\test.txt')
+    save(data, r'C:\Users\cair\Documents\data.txt')
