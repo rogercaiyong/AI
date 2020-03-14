@@ -40,9 +40,9 @@ for i, j in df_2.groupby('State'):
 #请列举每个sector在2013-2016年累计Research&Development的总投入
 df = pd.merge(df_1, df_2, how='left', on='Ticker Symbol')
 df['Period Ending'] = pd.to_datetime(df['Period Ending'])
-year = df[(df['Period Ending'] >= '01-01-2013') & (df['Period Ending'] <= '31-12-2016')]
+year = df[(df['Period Ending'] >= '01-01-2013') & (df['Period Ending'] <= '31-12-2016')] #此处日期格式是我电脑默认的‘日月年’
 print(year.groupby('GICS Sector').agg({'Research and Development':'sum'}))
 
 # 请列举出每个sector中，在2013-2016年累计Research&development投入最大的3家公司的名称以及投入的数值
 print(year[['GICS Sector','Ticker Symbol','Research and Development']].groupby(['GICS Sector','Ticker Symbol']).agg({'Research and Development':'sum'}))
-# 实在搞不定最后排序和取前三家公司了:(
+# 实在搞不定最后的排序和取前三家公司了:(
